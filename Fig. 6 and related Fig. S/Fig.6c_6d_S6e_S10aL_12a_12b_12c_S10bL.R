@@ -144,18 +144,8 @@ dpofmut <- dpofmut[,c(1,6,8,9)]
 names(dpofmut)[1] <- "mutdp"
 dpofmut$wtdp <- dpofref$wtdp[match(dpofmut$bname,dpofref$myname)]
 dpofmut$muttype <- paste(dpofmut$basefrom,dpofmut$baseto)
-# ##2)exptRNA of D
-# load("/mnt/data/home/chenfeng/project/chenfengdata5/NC2025review2nd/tRNAsupply/fig6.dpexptai.ofrefgene.randommutation.mg1655.Rdata")
-# dpofref <- dpofref[,c(2,6,10,7,8)]
-# names(dpofref)[c(1,3)] <- c("mutdp","wtdp")
-# dpofref$muttype <- paste(dpofref$from,dpofref$to)
-# load("/mnt/data/home/chenfeng/project/chenfengdata5/NC2025review2nd/tRNAsupply/fig6.dpofmutgene.MAline.MG1655.Rdata")
-# dpofmut <- dpofmut[,c(2,6,8,9)]
-# names(dpofmut)[1] <- "mutdp"
-# dpofmut$wtdp <- dpofref$wtdp[match(dpofmut$bname,dpofref$myname)]
-# dpofmut$muttype <- paste(dpofmut$basefrom,dpofmut$baseto)
 
-##3)exptRNA of D 0000000000000000000000
+##2)exptRNA of D
 load("/mnt/data/home/chenfeng/project/chenfengdata5/NC2025review2nd/tRNAsupply/fig6.dpexptai.ofrefgene.randommutation.mg1655.Rdata")
 dpofref <- dpofref[,c(3,6,11,7,8)]
 names(dpofref)[c(1,3)] <- c("mutdp","wtdp")
@@ -165,19 +155,6 @@ dpofmut <- dpofmut[,c(3,6,8,9)]
 names(dpofmut)[1] <- "mutdp"
 dpofmut$wtdp <- dpofref$wtdp[match(dpofmut$bname,dpofref$myname)]
 dpofmut$muttype <- paste(dpofmut$basefrom,dpofmut$baseto)
-
-
-# ##4)exptRNA of D
-# load("/mnt/data/home/chenfeng/project/chenfengdata5/NC2025review2nd/tRNAsupply/fig6.dpexptai.ofrefgene.randommutation.mg1655.Rdata")
-# dpofref <- dpofref[,c(4,6,12,7,8)]
-# names(dpofref)[c(1,3)] <- c("mutdp","wtdp")
-# dpofref$muttype <- paste(dpofref$from,dpofref$to)
-# load("/mnt/data/home/chenfeng/project/chenfengdata5/NC2025review2nd/tRNAsupply/fig6.dpofmutgene.MAline.MG1655.Rdata")
-# dpofmut <- dpofmut[,c(4,6,8,9)]
-# names(dpofmut)[1] <- "mutdp"
-# dpofmut$wtdp <- dpofref$wtdp[match(dpofmut$bname,dpofref$myname)]
-# dpofmut$muttype <- paste(dpofmut$basefrom,dpofmut$baseto)
-
 
 #########################################################################################
 figtype <- c("endous","tRNA")
