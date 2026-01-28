@@ -123,9 +123,9 @@ delteriousDinorde <- mclapply(mc.cores = 4,1:length(express$Gene.name),function(
   deD1 <- wilcox.test(decreasD$fitness,1,alternative="less")$p.value
   indeD <- wilcox.test(decreasD$fitness,increasD$fitness,alternative="less")$p.value
   inDdelper <- nrow(increasD %>% dplyr::filter(delterType=="T"))/nrow(increasD)
-  inDdelperP <- binom.test(nrow(increasD %>% dplyr::filter(delterType=="T")),nrow(increasD),alternative = "greater",p=0.5)$p.value # 0.7751553 average deleterious mutation percentage of 21 gene
+  inDdelperP <- binom.test(nrow(increasD %>% dplyr::filter(delterType=="T")),nrow(increasD),alternative = "greater",p=0.5)$p.value
   deDdelper <- nrow(decreasD %>% dplyr::filter(delterType=="T"))/nrow(decreasD)
-  deDdelperP <- binom.test(nrow(decreasD %>% dplyr::filter(delterType=="T")),nrow(decreasD),alternative = "greater",p=0.5)$p.value # 0.8661640
+  deDdelperP <- binom.test(nrow(decreasD %>% dplyr::filter(delterType=="T")),nrow(decreasD),alternative = "greater",p=0.5)$p.value
   data.frame(stringsAsFactors = F,percentage_deletious=c(inDdelper,deDdelper),lessthan1fit=c(inD1,deD1),morethan.5fra=c(inDdelperP,deDdelperP),type1=c("D−decreasing mutations","D−increasing mutations"),type2=c("D","D"),exp=rep(geneset,2)) %>%
     cbind(data.frame(stringsAsFactors = F,geneset,meanFit=c(mean(increasD$fitness),mean(decreasD$fitness)),sefit=c(sd(increasD$fitness)/(nrow(increasD)^0.5),sd(decreasD$fitness)/(nrow(decreasD)^0.5)),DelessthanIN=rep(indeD,2)))
   
