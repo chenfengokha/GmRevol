@@ -9,7 +9,7 @@ fig2a %>% ggplot(aes(dp0.1,D.trnaexp))+geom_point()+geom_vline(xintercept = c(0.
   labs(x="D groups estimated with CUB of top 10% highly expressed genes as tRNA supply",y="D groups estimated with tRNA expression levels as tRNA supply")+
   style.print()
 ###################################################################################
-###2 D of gmr gene. tRNA exp (GSE128812)
+###2
 
 load("~/project/HGT/exp/fig2-3.related/alldata.all.RPbest.filter.Rdata")
 
